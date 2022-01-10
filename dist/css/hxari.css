@@ -1,3 +1,4 @@
+
 :root {
     
     --hx-a: #0d1017;
@@ -79,9 +80,9 @@ h6 { font-size: 16px; }
 .container {
     width: 100%;
     background: var(--hx-b);
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
-    padding-top: 0.75rem;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-top: 12px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -178,8 +179,8 @@ img {
 .row {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
     .row > .col {
         margin-right: 10px;
@@ -192,6 +193,20 @@ img {
     width: auto;
 }
 
+.title {
+    color: var(--hx-d);
+    margin-bottom: 10px;
+}
+
+.pre {
+}
+    .pre-title {
+        color: var(--hx-d);
+    }
+    .pre-image {
+        width: 10px;
+    }
+
 .card {
     width: 162px;
     height: 250px;
@@ -200,7 +215,7 @@ img {
     background: var(--hx-c);
 }
     .card-title {
-        margin-bottom: 5px;
+        margin-bottom: 2px;
     }
     .card-content {
         height: 185px;
@@ -208,12 +223,14 @@ img {
     }
     .card-footer {
         height: 65px;
-        padding: 10px;
+        padding: 12px;
         background: var(--hx-k);
     }
 
 .footer {
     height: 350px;
-    padding: 20px;
     background: var(--hx-c);
 }
+    .footer-title > b {
+        color: var(--hx-j);
+    }
