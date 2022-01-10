@@ -1,0 +1,27 @@
+.main .row {
+}
+    .main .banner {
+        padding: 32px;
+        background: var(--hx-c);
+    }
+    .main .intro .col {
+        width: 49.28%;
+        padding: 32px;
+        background: var(--hx-c);
+    }
+    .main .project {
+        display: block;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        padding-bottom: 8px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+@media screen and (max-width: 360px) {
+    .main .row {
+    }
+        .main .intro .col {
+            width: 48.49%;
+        }
+}
