@@ -1,9 +1,17 @@
+
 .main .row {
 }
     .main .banner {
         padding: 32px;
         background: var(--hx-c);
     }
+        .main .banner .content {
+            width: 55%;
+            text-align: center;
+        }
+            .main .banner .content .text {
+                text-size-adjust: none;
+            }
     .main .intro .col {
         width: 49.28%;
         padding: 32px;
@@ -21,7 +29,21 @@
 @media screen and (max-width: 360px) {
     .main .row {
     }
-        .main .intro .col {
-            width: 48.49%;
+        .main .banner {
+            display: block;
         }
+            .main .banner .content {
+                width: auto;
+                text-align: left;
+            }
+        .main .intro {
+            display: block;
+        }
+            .main .intro .col {
+                width: 100%;
+                margin-bottom: 12px;
+            }
+            .main .intro .col:last-child {
+                margin: 0;
+            }
 }
