@@ -16,6 +16,49 @@
     
     --hx-j: #a6a8a5;
     --hx-k: #4b504c;
+    
+    --hx-l: #519AFF;
+    
+    --hx-m: #2f363e;
+}
+
+.bg-a {
+    background-color: var(--hx-a);
+}
+.bg-b {
+    background-color: var(--hx-b);
+}
+.bg-c {
+    background-color: var(--hx-c);
+}
+
+.hx-l {
+    color: var(--hx-l);
+}
+
+.pd-32 {
+    padding: 32px;
+}
+.pd-28 {
+    padding: 28px;
+}
+.pd-24 {
+    padding: 24px;
+}
+.pd-20 {
+    padding: 20px;
+}
+.pd-16 {
+    padding: 16px;
+}
+.pd-12 {
+    padding: 12px;
+}
+.pd-10 {
+    padding: 10px;
+}
+.pd-8 {
+    padding: 8px;
 }
 
 * {
@@ -50,7 +93,7 @@ a:not([href]):not([class]):hover {
 body {
     color: var(--hx-f);
     background: var(--hx-a);
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -112,9 +155,20 @@ h6 { font-size: 16px; }
     }
 }
 
+button {
+    outline: none;
+    border: 1px solid transparent;
+    background: var(--hx-k);
+    transition: all .3s ease;
+}
+
 img {
     width: 100%;
     height: auto;
+}
+
+pre {
+    overflow-x: scroll;
 }
 
 .rd-circle {
@@ -155,10 +209,13 @@ img {
 
 .header {
     width: 100%;
+    height: 60px;
     position: fixed;
     background: var(--hx-c);
+    box-shadow: 0 2px 1.5px var(--hx-b);
 }
     .header-banner {
+        height: 100%;
         padding: 10px;
         display: flex;
         align-items: center;
@@ -170,6 +227,13 @@ img {
             .header-title a {
                 color: var(--hx-d);
             }
+        .header-button {
+            width: 40px;
+            height: 40px;
+            font-size: 26px;
+            background: none;
+            color: var(--hx-f);
+        }
 
 .header-br {
     width: 100%;
@@ -198,14 +262,39 @@ img {
     margin-bottom: 10px;
 }
 
-.pre {
+.margin-0 {
+    margin: 0;
 }
-    .pre-title {
-        color: var(--hx-d);
+
+.open-left {
+    left: 0 !important;
+}
+
+.unorder {
+    height: auto;
+}
+    .unorder > li {
+        line-height: 28px;
+        list-style-type: none;
     }
-    .pre-image {
-        width: 10px;
+        .unorder > li li {
+            margin-left: 17px;
+        }
+        .unorder > li .li-title {
+            color: var(--hx-e);
+        }
+        .unorder > li .li-image {
+            width: 14px;
+        }
+@media screen and (max-width: 360px) {
+    .unorder > li {
+        line-height: 25px;
     }
+}
+
+.quote {
+    border-left: 4px solid var(--hx-k);
+}
 
 .card {
     width: 162px;
@@ -228,7 +317,8 @@ img {
     }
 
 .footer {
-    height: 350px;
+    height: auto;
+    padding: 20px;
     background: var(--hx-c);
 }
     .footer-title > b {
