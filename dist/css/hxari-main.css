@@ -18,13 +18,15 @@
         background: var(--hx-c);
     }
     .main .project {
-        display: block;
-        flex-wrap: nowrap;
-        white-space: nowrap;
-        padding-bottom: 8px;
-        overflow-x: scroll;
-        overflow-y: hidden;
     }
+        .main .project .projects {
+            display: block;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            padding-bottom: 8px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
 
 @media screen and (max-width: 360px) {
     .main .row {
