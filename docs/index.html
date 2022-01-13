@@ -11,83 +11,46 @@
         <meta name="description" content="hxAri Portofolio page." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hxAri/hxAri.github.io@latest/dist/css/hxari.min.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hxAri/hxAri.github.io@latest/dist/css/hxari-main.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" />
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" />
+        
+        <link rel="stylesheet" href="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/css/hxari.css" />
+        <link rel="stylesheet" href="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/css/hxari-main.css" />
+        <link rel="stylesheet" href="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/css/hxari-yume.css" />
+        
+        <script type="text/javascript">
+            
+            ;(function() {
+                if( /eruda=true/.test( window.location ) ) {
+                    document.write( "<script type=\"text/javascript\" src=\"https://cdn.jsdelivr.net/npm/eruda@latest\"></scr" + "ipt>" );
+                    document.write( "<script type=\"text/javascript\">eruda.init();</scr" + "ipt>" );
+                }
+            })();
+            
+        </script>
+        
+        <script type="text/javascript" src="https://unpkg.com/vue@next"></script>
+        <script type="text/javascript" src="https://unpkg.com/vue-router@4"></script>
+        
+        <script type="text/javascript" src="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/js/hxari-require.js"></script>
         
         <link rel="icon" href="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/favicon/android-chrome-192x192.png" sizes="192x192" />
         <link rel="icon" href="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/favicon/android-chrome-512x512.png" sizes="512x512" />
         <link rel="icon" href="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/favicon/favicon-32x32.png" sizes="32x32" />
         <link rel="icon" href="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/favicon/favicon-16x16.png" sizes="16x16" />
         
-        <link rel="shortcut-icon" type="image/x-icon" href="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/favicon/favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/favicon/favicon.ico" />
         
         <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/favicon/apple-touch-icon.png" />
         
     </head>
     <body>
-        <div class="header">
-            <div class="header-banner">
-                <a href="https://hxari.github.io">
-                    <div class="avatar rd-circle">
-                        <img class="avatar-image rd-circle" src="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/avatar/hxari.png" alt="hxAri Avatar" />
-                        <div class="avatar-cover rd-circle"></div>
-                    </div>
-                </a>
-                <p class="header-title"><a href="https://hxari.github.io">hxAri</a></p>
-            </div>
-        </div>
-        <div class="header-br"></div>
-        <div class="container main">
-            <div class="banner rd-square flex flex-center">
-                <div class="content">
-                    <h1 class="title">About</h1>
-                    <p class="text">
-                        Hello, I'm Ari Setiawan, I'm a Programmer from Indonesian. I'm currently undergoing a Software Engineering vocational high school. I usually work on my own projects but I can also work with a team.
-                    </p>
-                </div>
-            </div>
-            <div class="row intro">
-                <div class="col rd-square">
-                    <h4 class="title">Skills</h4>
-                    <pre class="pre skills">│<br/>├── <img class="pre-image" src="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/language/a5Erelw.1WTyY.png" alt="Php Avatar" /> <span class="pre-title">Php</span><br/>│   └── <img class="pre-image" src="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/framework/9eSMBN6wiuM.I.jpg" alt="Laravel Avatar" /> <span class="pre-title">Laravel</span><br/>├── <img class="pre-image" src="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/language/bbHVlJ3Eo8RXo.png" alt="Java Avatar" /> <span class="pre-title">Java</span><br/>├── <img class="pre-image" src="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/language/d7HR9yGedMoC2.png" alt="Python Avatar" /> <span class="pre-title">Python</span><br/>│   ├── <img class="pre-image" src="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/framework/c3KJbv1ckwtNc.png" alt="Flask Avatar" /> <span class="pre-title">Flask</span><br/>│   └── <img class="pre-image" src="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/framework/93b1SeJX4QEvY.png" alt="Django Avatar" /> <span class="pre-title">Django</span><br/>└── <img class="pre-image" src="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/language/5eP.zAQHRKTkM.png" alt="JavaScript Avatar" /> <span class="pre-title">JavaScript</span><br/>    ├── <img class="pre-image" src="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/framework/ddcCMfsMyEjs..png" alt="Vue Avatar" /> <span class="pre-title">Vue</span><br/>    └── <img class="pre-image" src="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/framework/17Glaiqd3ge4I.jpg" alt="React Avatar" /> <span class="pre-title">React</span></pre>
-                </div>
-                <div class="col rd-square">
-                    <h4 class="title">Contact</h4>
-                    <pre class="pre contact">│<br/>├── <span class="pre-title">Email</span><br/>│   └── <a href="mailto:ari160824@gmail.com">ari160824@gmail.com</a><br/>├── <span class="pre-title">Phone</span><br/>│   └── Unavaible<br/>└── <span class="pre-title">Social</span><br/>    ├── <span class="pre-title">Instagram</span><br/>    │   └── <a href="https://instagram.com/hx.ari" rel="noopener noreferrer" target="_blank">instagram.com/hx.ari</a><br/>    ├── <span class="pre-title">Facebook</span><br/>    │   └── <a href="https://facebook.com/hxAre" rel="noopener noreferrer" target="_blank">facebook.com/hxAre</a><br/>    ├── <span class="pre-title">Twitter</span><br/>    │   └── <a href="https://twitter.com/hxxAre" rel="noopener noreferrer" target="_blank">twitter.com/hxxAre</a><br/>    └── <span class="pre-title">Github</span><br/>        └── <a href="https://github.com/hxAri" rel="noopener noreferrer" target="_blank">github.com/hxAri</a></pre>
-                </div>
-            </div>
-            <h4 class="title">Projects</h4>
-            <div class="row project scroll-hidden">
-                <div class="col card rd-square">
-                    <div class="card-content flex flex-center">
-                        <img class="card-image" src="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/avatar/2fM7JQH-BeImw.png" alt="Yume Avatar" />
-                        <div class="card-cover"></div>
-                    </div>
-                    <div class="card-footer">
-                        <h5 class="card-title">Yume</h5>
-                        <p class="card-text">
-                            <a href="Yume">hxAri/Yume/</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="col card rd-square">
-                    <div class="card-content flex flex-center">
-                        <img class="card-image" src="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/avatar/6dOFxNDTRMAAk.png" alt="Syntax Avatar" />
-                        <div class="card-cover"></div>
-                    </div>
-                    <div class="card-footer">
-                        <h5 class="card-title">Syntax</h5>
-                        <p class="card-text">
-                            <a href="Syntax">hxAri/Syntax/</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container footer flex flex-center">
-            <div class="content">
-                <h6 class="footer-title">&copy; <b>hxAri 2022</b></h6>
-            </div>
-        </div>
+        
+        <div id="vue-root"></div>
+        
+        <script type="text/javascript" src="https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/js/hxari.js"></script>
     </body>
 </html>
