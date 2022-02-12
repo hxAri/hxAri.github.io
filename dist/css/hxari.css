@@ -11,7 +11,7 @@
 
 :root {
   
-  --bg-cv: url( "/dist/img/banner/1c9bm16gnwqQI.jpg" );
+  --bg-cv: url( "https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/banner/1c9bm16gnwqQI.jpg" );
   
   --bg-00: #e0e0e0; /** Body Color */
   --bg-01: #eeeeee; /** Form Color */
@@ -45,7 +45,7 @@
 
 [data-theme="dark"] {
   
-  --bg-cv: url( "/dist/img/banner/ccDgB4n6DUIao.jpg" );
+  --bg-cv: url( "https://raw.githubusercontent.com/hxAri/hxAri.github.io/main/dist/img/banner/ccDgB4n6DUIao.jpg" );
   
   --bg-00: #0c0c0c; /** Body Color */
   --bg-01: #242424; /** Form Color */
