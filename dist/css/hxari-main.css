@@ -6,7 +6,6 @@
  * @github https://github.com/hxAri
  *
  */
-
 .home,
 .home .banner,
 .home .about.single,
@@ -15,44 +14,71 @@
   transition: background .3s;
 }
 
+.section {
+  width: 700px;
+  height: auto;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+  .section h1.title {
+    line-height: 2;
+    text-transform: uppercase;
+  }
+  .section .single {
+    height: auto;
+  }
+@media screen and (max-width:360px) {
+  .section {
+    width: auto;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+    .section h1.title {
+      font-size: 28px;
+    }
+    .section .single {
+      width: 300px;
+      height: auto;
+      margin: auto;
+    }
+}
+
+
 .home {
   background: var(--bg-02);
 }
   .home .banner {
-    height: 800px;
-    background-color: var(--bg-01);
-    background-image: var(--bg-cv);
-    background-size: cover;
+    width: 100vw;
+    height: 400px;
   }
+    .home .banner .album {
+      width: 900px;
+      height: 400px;
+      margin: auto;
+      background-color: var(--bg-01);
+      background-image: var(--bg-cv);
+      background-position: top;
+      background-size: cover;
+    }
+    .home .banner .cover {
+      width: auto;
+      height: 400px;
+      margin-top: -400px;
+      background: rgba(0,0,0,.6);
+    }
   .home .about.single {
     width: 700px;
-    height: auto;
     margin: auto;
     /** margin-top: -700px; */
     margin-top: -100px;
-    /** padding-top: 32px; */
+    padding-top: 32px;
     margin-bottom: 40px;
-    /** background: var(--bg-02); */
+    background: var(--bg-02);
     border: 2px solid var(--ln-c-1);
     border-radius: 3px;
   }
-    .home .about.single .profile {
-      height: 700px;
-      background: rgba(0,0,0,.1);
-      opacity: 0;
-      display: none;
-    }
-      .home .about.single .profile .picture {
-        width: 500px;
-        height: 500px;
-        overflow: hidden;
-        margin: auto;
-        margin-top: 100px;
-      }
-        .home .about.single .profile .picture .image {
-          height: auto;
-          margin-top: -150px;
-        }
     .home .about.single .self {
       height: 440px;
       background: var(--bg-02);
@@ -118,10 +144,18 @@
           }
 
 @media screen and (max-width:360px) {
-  .home {}
+  .home {
+  }
     .home .banner {
-      height: 350px;
+      height: 250px;
     }
+      .home .banner .album {
+        width: 100%;
+        height: 100%;
+      }
+      .home .banner .cover {
+        display: none;
+      }
     .home .about.single {
       width: auto;
       border: 0;
@@ -129,12 +163,6 @@
       font-size: 14px;
       padding-top: 40px;
     }
-      .home .about.single .profile {
-      }
-        .home .about.single .profile .picture {
-        }
-          .home .about.single .profile .picture .image {
-          }
       .home .about.single .self {
         width: 300px;
         height: auto;
@@ -247,6 +275,58 @@
           .contact .section .single .detail .form .double.dp-flex .group .input {
             width: 169px;
           }
+
+@media screen and (max-width:360px) {
+  .contact .section {
+  }
+    .contact .section .single {
+    }
+      .contact .section .single .detail {
+        position: static;
+        display: block;
+      }
+        .contact .section .single .detail .info {
+          width: auto;
+          height: 500px;
+          padding: 28px;
+          border-radius: 3px 3px 0 0;
+          position: static;
+        }
+          .contact .section .single .detail .info .center.dp-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+            .contact .section .single .detail .info .center.dp-flex .dp-block {
+              margin: 0;
+            }
+              .contact .section .detail .info .center.dp-flex .dp-block .group .icon,
+              .contact .section .detail .info .center.dp-flex .dp-block .group .text {
+              }
+              .contact .section .detail .info .center.dp-flex .dp-block .group .text {
+              }
+        .contact .section .single .detail .form {
+          width: auto;
+          height: auto;
+          border-radius: 0 0 3px 3px;
+        }
+          .contact .section .single .detail .form .group .input,
+          .contact .section .single .detail .form .group .textarea {
+            width: 100%;
+          }
+          .contact .section .single .detail .form .group .textarea {
+            height: 140px;
+          }
+          .contact .section .single .detail .form .double.dp-flex {
+            display: block;
+          }
+          .contact .section .single .detail .form .double.dp-flex .group {
+            margin-right: 0;
+          }
+            .contact .section .single .detail .form .double.dp-flex .group .input {
+              width: 100%;
+            }
+}
 
 
 .pg.contact .section {
