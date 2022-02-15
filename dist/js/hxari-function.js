@@ -1,4 +1,11 @@
 
+Object.defineProperty( String.prototype, "capitalize", {
+  value: function() {
+    return this.charAt( 0 ).toUpperCase() + this.slice( 1 );
+  },
+  enumerable: false
+});
+
 function shortText( text, rem, max ) {
   if( text.length > max ) {
     text = text.substr( 0, rem );
@@ -105,9 +112,26 @@ var self = Object.create({
 
 var component = [];
   component.home = [];
-  component.yume = [];
-  component.syntax = [];
-  component.phptree = [];
+  component.about = [];
+  component.privacy = [];
+  component.contact = [];
+  component.sitemap = [];
+  
+  component.yume = {
+    childrens: [
+      {
+        path: "about",
+        title: "Yume | About",
+        component: []
+      }
+    ]
+  };
+  component.syntax = {
+    childrens: []
+  };
+  component.phptree = {
+    childrens: []
+  };
 
 var Document = Object.create({
   doc: document.documentElement,
@@ -119,9 +143,20 @@ var Document = Object.create({
   }
 });
 
+var Title = Object.create({
+  def: "hxAri · @title",
+  doc: document,
+  get: function() {
+    return( this.doc.title );
+  },
+  set: function( title ) {
+    return( this.doc.title = this.def.replace( /\@(title)/, title ) );
+  }
+});
+
 var Theme = function() {
   
-  var c = Cookies.get( "theme" );
+  var c = Cookies.get( "theme", { path: "/" } );
   var d = Document.get( "theme" );
   
   var o = Object.create({
@@ -140,7 +175,7 @@ var Theme = function() {
       // Meta Set
       
       // Cookie Set
-      Cookies.set( "theme", mode );
+      Cookies.set( "theme", mode, { expires: 7, path: "/" } );
       
       // Document Set
       Document.set( "theme", mode );
