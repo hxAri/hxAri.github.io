@@ -13,8 +13,30 @@ var router = VueRouter.createRouter({
       component: component.home.index
     },
     {
+      path: "/about",
+      component: component.about.index
+    },
+    {
+      path: "/privacy",
+      component: component.privacy.index
+    },
+    {
+      path: "/contact",
+      component: component.contact.index
+    },
+    {
+      path: "/sitemap",
+      component: component.sitemap.index
+    },
+    {
       path: "/Yume",
-      component: component.yume.index
+      component: component.yume.index,
+      childrens: [
+        {
+          path: "",
+          component: component.yume.index
+        }
+      ]
     },
     {
       path: "/Syntax",
@@ -32,6 +54,7 @@ var root = {
   name: "root",
   data: function() {
     return {
+      theme: null,
       paths: [
         {
           path: "/",
@@ -74,6 +97,9 @@ var root = {
       ]
     };
   },
+  mounted: function() {
+    this.theme = new Theme();
+  },
   components: {
     Avatar: avatar,
   },
@@ -99,7 +125,7 @@ var root = {
             </div>
           </div>
           <div class="single">
-            <p class="fs-14">&copy hxAri 2022</p>
+            <p class="fs-14">&copy <router-link to="/">hxAri</router-link> 2022</p>
           </div>
         </div>
       </div>
