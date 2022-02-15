@@ -143,15 +143,17 @@ var swiper = [];
 var trigger = {
   data: function() {
     return {
-      value: "trigger @level pd-14 pd-top-10 pd-bottom-10 mg-top-14 rd-square @close"
+      value: "trigger @level @float pd-14 pd-top-10 pd-bottom-10 mg-top-14 rd-square dp-flex flex-left @close"
     };
   },
   props: [
     "level",
+    "float",
     "string"
   ],
   mounted: function() {
     this.value = this.value.replace( /\@level/i, this.level );
+    this.value = this.value.replace( /\@float/i, typeof this.float === "undefined" ? "" : ( this.float === true ? "float" : "" ) );
   },
   methods: {
     close: function() {
@@ -160,8 +162,8 @@ var trigger = {
   },
   template: `
     <div :class="value">
-      <span class="text">{{ string }}</span>
-      <button @click="close" class="button close pd-0 fs-20">
+      <p class="text">{{ string }}</p>
+      <button @click="close" class="button close pd-0 fs-20 dp-flex flex-center">
         <i class="bx bx-x"></i>
       </button>
     </div>
