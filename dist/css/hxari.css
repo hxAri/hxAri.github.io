@@ -138,7 +138,7 @@ h6 { font-size: 16px; }
 }
 
 /*
- * Set Default Button Style.
+ * Button Style.
  *
  * =====================================
  */
@@ -149,7 +149,7 @@ button {
 }
 
 /*
- * Set Default Image Style.
+ * Image Style.
  *
  * =====================================
  */
@@ -159,7 +159,16 @@ img {
 }
 
 /*
- * Set Default Pre Style.
+ * Paragraph Style.
+ *
+ * =====================================
+ */
+p {
+  line-height: 1.8;
+}
+
+/*
+ * Pre Style.
  *
  * =====================================
  */
@@ -409,14 +418,16 @@ pre {
       color: var(--hx-c-3);
     }
     .form .group .submit {
-      background: var(--bg-03);
-      border-color: var(--ln-c-2);
-      color: var(--fs-00);
+      border-color: #007bff;
+      background: #007bff;
       font-weight: 550;
+      color: #f8f8ff;
+      padding: 8px;
     }
     .form .group .submit:hover {
-      background: var(--bg-01);
-      border-color: var(--bg-01);
+      border-color: #007bff;
+      background: #007bff;
+      color: #f8f8ff;
     }
 
 /*
@@ -1024,35 +1035,61 @@ pre {
   text-size-adjust: none;
 }
 
+.float-right {
+  top: 60px;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  z-index: 99999;
+  position: fixed;
+  padding-right: 14px;
+}
+  .float-right .dp-block {
+    width: 45%;
+  }
+
+@media screen and (max-width:360px) {
+  .float-right .dp-block {
+    width: 95.6%;
+  }
+}
+
 /*
  * Trigger Class.
  *
  * =====================================
  */
 .trigger {
-  top: 60px;
-  right: 14px;
-  width: 45%;
-  z-index: 99999;
-  position: fixed;
+  width: auto;
+  margin-bottom: 14px;
+  position: relative;
   background: var(--bg-02);
   border: 1px solid var(--ln-c-1);
 }
+.trigger:last-child {
+}
   .trigger .text {
+    width: 94.6%;
     color: var(--fs-01);
   }
   .trigger .link {
     font-weight: 700;
   }
   .trigger .button.close {
-    top: 12px;
+    top: 10px;
     right: 14px;
-    height: 22px;
     position: absolute;
     background: transparent;
   }
   .trigger .button.close:hover {
     background: transparent;
+  }
+  .trigger.float {
+    top: 60px;
+    width: 44.4%;
+    right: 14px;
+    z-index: 99999;
+    position: fixed;
   }
   .trigger.primary {
     background-color: #cfe2ff;
@@ -1104,6 +1141,15 @@ pre {
     .trigger.danger .link {
       color: #6a1a21;
     }
+
+@media screen and (max-width:360px) {
+  .trigger.float {
+    width: 92%;
+  }
+    .trigger .text {
+      width: 92.7%;
+    }
+}
 
 .unorder {
   height: auto;
