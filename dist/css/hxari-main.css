@@ -1,335 +1,313 @@
 
-/*
- * @author hxAri
- * @create -
- * @update 12.02-2022
- * @github https://github.com/hxAri
- * 
- * Memew
- */
-.home,
-.home .banner,
-.home .about.single,
-.home .about.single .self,
-.home .section .projects {
-  transition: background .3s;
-}
+.template {}
 
-.section {
-  width: 700px;
+.avatar {}
+  .avatar-wrapper
+  {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    background: var(--bg-02m);
+  }
+    .avatar-image
+    {
+      width: 100%;
+      height: 100%;
+    }
+    .avatar-cover
+    {
+      top: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+
+.burger,
+.burger > .burger-line
+{
+  transition: all .3s ease-in-out;
+}
+  .burger > .burger-line
+  {
+    width: 28px;
+    height: 2px;
+    display: block;
+    border-radius: 9999px;
+    background-color: var(--sh-00m);
+  }
+  .burger > .burger-line:not(:last-child)
+  {
+    margin-bottom: 7px;
+  }
+.burger.burger-active
+{
+  transition-delay: .3s;
+  transform: rotate(45deg);
+}
+  .burger.burger-active > .burger-line:nth-child(2)
+  {
+    width: 0;
+  }
+  .burger.burger-active > .burger-line:nth-child(1),
+  .burger.burger-active > .burger-line:nth-child(3)
+  {
+    transition-delay: .3s;
+  }
+  .burger.burger-active > .burger-line:nth-child(1)
+  {
+    transform: translateY(9px);
+  }
+  .burger.burger-active > .burger-line:nth-child(3)
+  {
+    transform: translateY(-9px) rotate(90deg);
+  }
+
+.dropdown
+{
+}
+  .dropdown-display
+  {
+  }
+  .dropdown-content
+  {
+    height: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: .4s all ease-in-out;
+  }
+.dropdown:hover .dropdown-content
+{
   height: auto;
-  margin: auto;
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
-  .section h1.title {
-    line-height: 2;
-    text-transform: uppercase;
-  }
-  .section .single {
-    height: auto;
-  }
-@media screen and (max-width:360px) {
-  .section {
-    width: auto;
-    font-size: 14px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-    .section h1.title {
-      font-size: 28px;
-    }
-    .section .single {
-      width: 300px;
-      height: auto;
-      margin: auto;
-    }
+  max-height: 100vh;
 }
 
-
-.home {
-  background: var(--bg-02);
+.terminal
+{
+  color: var(--fc-00m);
+  background: var(--bg-01m);
+  font-size: 16px;
+  font-family: "Inconsolata", monospace;
 }
-  .home .banner {
-    width: 100vw;
-    height: 400px;
+  .terminal-form
+  {
+    color: var(--fc-00m);
   }
-    .home .banner .album {
-      width: 900px;
-      height: 400px;
-      margin: auto;
-      background-color: var(--bg-01);
-      background-image: var(--bg-cv);
-      background-position: top;
-      background-size: cover;
+    .terminal-prompt
+    {
     }
-    .home .banner .cover {
-      width: auto;
-      height: 400px;
-      margin-top: -400px;
-      background: rgba(0,0,0,.6);
+    .terminal-prompt.x
+    {
+      font-family: "Inconsolata", monospace;
     }
-  .home .about.single {
-    width: 700px;
-    margin: auto;
-    /** margin-top: -700px; */
-    margin-top: -100px;
-    padding-top: 32px;
-    margin-bottom: 40px;
-    background: var(--bg-02);
-    border: 2px solid var(--ln-c-1);
-    border-radius: 3px;
-  }
-    .home .about.single .self {
-      height: 440px;
-      background: var(--bg-02);
-    }
-      .home .about.single .self .info {
-        width: 500px;
-      }
-        .home .about.single .self .info p.fname,
-        .home .about.single .self .info p.xyzjs {
-          text-transform: uppercase;
-          font-weight: 1000;
-          font-size: 50px;
-          line-height: 2;
-        }
-        .home .about.single .self .info p.xyzjs {
-          font-size: 18px;
-        }
-        .home .about.single .self .info .group.dp-flex .icon .bx {
-          color: #8490ff;
-        }
-        .home .about.single .self .info .group.dp-flex .text {
-          padding-top: 3px;
-        }
-    .home .section {
-      width: 700px;
-      height: auto;
-      margin: auto;
-      margin-top: 60px;
-      margin-bottom: 60px;
-    }
-      .home .section h1.title {
-        line-height: 2;
-        text-transform: uppercase;
-      }
-      .home .section .single {
-        height: auto;
-      }
-        .home .section .single .paragraph {
-          width: 500px;
-          height: auto;
-          line-height: 1.8;
-        }
-      .home .projects,
-      .home .contact {
-        padding-top: 0.1px;
-        padding-bottom: 0.1px;
-        background: var(--bg-01);
-      }
-        .home .projects .card {
-          width: 161px;
-          position: relative;
-          transition: background .3s;
-        }
-          .home .projects .card .card-content {
-            height: 150px;
-          }
-          .home .projects .card .card-footer {
-            transition: background .3s;
-          }
-          .home .projects .card .card-footer .author,
-          .home .projects .card .card-footer .detail {
-            display: none;
-          }
-
-@media screen and (max-width:360px) {
-  .home {
-  }
-    .home .banner {
-      height: 250px;
-    }
-      .home .banner .album {
-        width: 100%;
-        height: 100%;
-      }
-      .home .banner .cover {
-        display: none;
-      }
-    .home .about.single {
-      width: auto;
+    .terminal-input
+    {
+      width: 78.5%;
       border: 0;
-      margin: 0;
-      font-size: 14px;
-      padding-top: 40px;
+      outline: 0;
+      color: var(--fc-00m);
+      background: var(--bg-01m);
     }
-      .home .about.single .self {
-        width: 300px;
-        height: auto;
-        margin: auto;
-        padding: 0;
-        display: block;
-      }
-        .home .about.single .self .info {
-          width: auto;
-          height: auto;
-        }
-          .home .about.single .self .info p.fname,
-          .home .about.single .self .info p.xyzjs {
-            line-height: 1.2;
-            font-size: 40px;
-          }
-          .home .about.single .self .info p.xyzjs {
-            line-height: 1.6;
-            margin-top: 10px;
-            font-size: 14px;
-          }
-          .home .about.single .self .info .group.dp-flex .icon {
-            margin-right: 5px;
-            margin-bottom: 5px;
-          }
-      .home .section {
-        width: auto;
-        font-size: 14px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-      }
-        .home .section .title {
-          font-size: 28px;
-        }
-        .home .section .single {
-          width: 300px;
-          height: auto;
-          margin: auto;
-        }
-          .home .section .single .paragraph {
-            width: auto;
-          }
-        .home .projects {
-        }
-          .home .projects .card {
-            width: auto;
-            margin: 0;
-            margin-bottom: 35px;
-          }
-          .home .projects .card:last-child {
-            margin-bottom: 0;
-          }
-            .home .projects .card .card-content {
-              height: 300px;
-            }
-            .home .projects .card .card-footer .author {
-              display: inline;
-              color: var(--hx-c-6);
-            }
-            .home .projects .card .card-footer .detail {
-              display: block;
-            }
+
+@media (max-width: 700px)
+{
+  .terminal-input
+  {
+    width: 54.2%;
+  }
 }
 
-.contact .section {
+.responsive-column 
+{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /*
+   * grid-template-rows: 10vw 30vw 10vw;
+   *
+   */
+  grid-gap: 0;
 }
-  .contact .section .single {
+  .responsive-column .header,
+  .responsive-column .breakr,
+  .responsive-column .footer 
+  {
+    grid-column: 1 / span 5;
   }
-    .contact .section .single .detail {
+  .responsive-column .parent 
+  {
+    grid-column: 3 span;
+  }
+  .responsive-column .sidebr 
+  {
+    grid-column: 1 span;
+    background: red;
+  }
+  .responsive-column .header,
+  .responsive-column .parent,
+  .responsive-column .sidebr 
+  {
+    background: var(--bg-00m);
+  }
+  .responsive-column .sidebr 
+  {
+    background: red;
+  }
+  .responsive-column .header
+  {
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    position: fixed;
+    box-shadow: 0 2px 1.5px rgba(0,0,0,.1);
+  }
+    .responsive-column .header-banner
+    {
       position: relative;
     }
-      .contact .section .single .detail .info {
-        top: -29.5px;
-        right: 0;
-        width: 320px;
-        height: 500px;
-        padding: 32px;
-        font-size: 14px;
-        background: #007bff;
+      .responsive-column .header-banner .avatar .avatar-wrapper
+      {
+        background: transparent;
+      }
+      .responsive-column .header-banner .burger
+      {
+        display: none;
+      }
+  .responsive-column .breakr
+  {
+    width: 100%;
+    height: 68px;
+  }
+  .responsive-column .sidebr
+  {
+  }
+    .responsive-column .sidebr-main
+    {
+    }
+      .responsive-column .sidebr-main .li
+      {
+        line-height: 2.5;
+      }
+  .responsive-column .footer
+  {
+    color: #CCCCCC;
+    background: #282D32;
+    flex-direction: column;
+  }
+    .responsive-column .footer a
+    {
+      color: #CCEEFF;
+    }
+    .responsive-column .footer i
+    {
+      color: #8C9E9D;
+    }
+    .responsive-column .footer h1,
+    .responsive-column .footer h2,
+    .responsive-column .footer h3,
+    .responsive-column .footer h4,
+    .responsive-column .footer h5,
+    .responsive-column .footer h6
+    {
+      color: #FFFFFF;
+    }
+    .responsive-column .footer-wrapper
+    {
+      width: 71.4%;
+      margin: auto;
+      margin-top: 140px;
+      margin-bottom: 140px;
+    }
+      .responsive-column .footer-content
+      {
+      }
+        .responsive-column .footer-group
+        {
+          width: 100%;
+        }
+      .responsive-column .footer-single
+      {
+        color: #FFFFFF;
+        padding: 14px;
+      }
+        .responsive-column .footer-li
+        {
+          list-style-type: none;
+        }
+  
+@media (max-width: 700px)
+{
+  .responsive-column .header {}
+    .responsive-column .header-banner {}
+      .responsive-column .header-banner .burger
+      {
+        right: 14px;
+        display: block;
         position: absolute;
       }
-        .contact .section .single .detail .info .center.dp-flex {
-          height: 100%;
-        }
-          .contact .section .single .detail .info .center.dp-flex .dp-block {
-            margin-top: 40px;
-          }
-            .contact .section .detail .info .center.dp-flex .dp-block .group .icon,
-            .contact .section .detail .info .center.dp-flex .dp-block .group .text {
-              color: #ffffff;
-            }
-            .contact .section .detail .info .center.dp-flex .dp-block .group .text {
-              padding-top: 4px;
-            }
-      .contact .section .single .detail .form {
-        width: 380px;
-        height: 441px;
-        padding-top: 0;
-        border-radius: 3px 0 0 3px;
-      }
-        .contact .section .single .detail .form .group .input,
-        .contact .section .single .detail .form .group .textarea {
-          width: 351px;
-        }
-        .contact .section .single .detail .form .group .textarea {
-          height: 140px;
-        }
-        .contact .section .single .detail .form .double.dp-flex {
-        }
-          .contact .section .single .detail .form .double.dp-flex .group .input {
-            width: 169px;
-          }
-
-@media screen and (max-width:360px) {
-  .contact .section {
+  .responsive-column .parent,
+  .responsive-column .sidebr
+  {
+    grid-column: 1 / span 5;
   }
-    .contact .section .single {
+  .responsive-column .sidebr
+  {
+    top: 0;
+    left: -100%;
+    width: 83%;
+    height: 100%;
+    z-index: 99999;
+    position: fixed;
+    /*
+     * transition: all .3s ease-in-out;
+     *
+     */
+    background: rgba(0,0,0,.4);
+  }
+    .responsive-column .sidebr-exit
+    {
+      width: 100%;
+      height: 100%;
+      background: transparent;
     }
-      .contact .section .single .detail {
-        position: static;
-        display: block;
+    .responsive-column .sidebr-main
+    {
+      top: 0;
+      left: -100%;
+      width: 66%;
+      height: 100%;
+      z-index: 99999;
+      position: fixed;
+      transition: all .4s;
+      background: var(--bg-00m);
+    }
+  .responsive-column .sidebr.sidebr-active,
+  .responsive-column .sidebr-main.sidebr-active
+  {
+    left: 0 !Important;
+  }
+  .responsive-column .footer
+  {
+    flex-direction: column;
+  }
+    .responsive-column .footer-wrapper
+    {
+      width: 94%;
+      margin: 0;
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+      .responsive-column .footer-content
+      {
+        flex-wrap: wrap;
       }
-        .contact .section .single .detail .info {
-          width: auto;
-          height: 500px;
-          padding: 28px;
-          border-radius: 3px 3px 0 0;
-          position: static;
+        .responsive-column .footer-group
+        {
+          width: 100%;
         }
-          .contact .section .single .detail .info .center.dp-flex {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-            .contact .section .single .detail .info .center.dp-flex .dp-block {
-              margin: 0;
-            }
-              .contact .section .detail .info .center.dp-flex .dp-block .group .icon,
-              .contact .section .detail .info .center.dp-flex .dp-block .group .text {
-              }
-              .contact .section .detail .info .center.dp-flex .dp-block .group .text {
-              }
-        .contact .section .single .detail .form {
-          width: auto;
-          height: auto;
-          border-radius: 0 0 3px 3px;
-        }
-          .contact .section .single .detail .form .group .input,
-          .contact .section .single .detail .form .group .textarea {
-            width: 100%;
-          }
-          .contact .section .single .detail .form .group .textarea {
-            height: 140px;
-          }
-          .contact .section .single .detail .form .double.dp-flex {
-            display: block;
-          }
-          .contact .section .single .detail .form .double.dp-flex .group {
-            margin-right: 0;
-          }
-            .contact .section .single .detail .form .double.dp-flex .group .input {
-              width: 100%;
-            }
 }
 
-
-.pg.contact .section {
-  
+.home
+{
+  background: var(--bg-01m);
 }
