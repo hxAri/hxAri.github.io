@@ -1,8 +1,10 @@
 
-![hxAri](https://raw.githubusercontent.com/hxAri/hxAri/main/public/images/1677866924;deVw5x2Uzx.png)
+![hxAri](https://raw.githubusercontent.com/hxAri/hxAri/main/public/images/1701255136;6duiesguuJBCQ.png)
 <!--![Profile Views](https://gpvc.arturio.dev/hxAri)-->
 
-A Full Stack Developer from Indonesia who likes to drink Chocolate coffee while thinking of crazy ideas to build programs that can benefit everyone
+self expansion infinite void
+
+[![Check out hxAri's profile on stardev.io](https://stardev.io/developers/hxAri/badge/languages/global.svg)](https://stardev.io/developers/hxAri)
 
 | ![stats] | ![language] |
 | ------------- | ------------- |
